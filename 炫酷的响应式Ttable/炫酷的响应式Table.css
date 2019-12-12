@@ -1,0 +1,67 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: '微软雅黑', sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #0a080a;
+}
+
+.container {
+  width: 80%;
+  padding: 20px;
+}
+
+.container .contact_us {
+  width: 100%;
+  margin: 0 0 10px;
+  font-size: 36px;
+  text-align: center;
+  color: #45f3ff;
+}
+
+.container .row100 {
+  display: grid;
+  position: relative;
+  width: 100%;
+  grid-template-columns: repeat(auto-fit) minmax(300px, 1fr);
+}
+
+.container .row100 .inputBox {
+  position: relative;
+  width: 100%;
+  height: 40px;
+  color: #44f3ff;
+}
+
+.container .row100 .inputBox input {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  font-size: 18px;
+  padding: 0 10px;
+  z-index: 1;
+  color: #000;
+}
+
+.container .row100 .inputBox input {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  line-height: 40px;
+  padding: 0 10px;
+  transition: 0.5s;
+  pointer-events: none;
+  font-size: 18px;
+}
