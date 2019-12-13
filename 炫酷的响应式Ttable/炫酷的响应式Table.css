@@ -30,7 +30,14 @@ body {
   display: grid;
   position: relative;
   width: 100%;
-  grid-template-columns: repeat(auto-fit) minmax(300px, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.container .row100 .col {
+  position: relative;
+  width: 100%;
+  padding: 0 10px;
+  margin: 30px 0 10px;
 }
 
 .container .row100 .inputBox {
@@ -40,7 +47,8 @@ body {
   color: #44f3ff;
 }
 
-.container .row100 .inputBox input {
+.container .row100 .inputBox input[type='text'],
+.container .row100 .textarea textarea {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -52,16 +60,69 @@ body {
   padding: 0 10px;
   z-index: 1;
   color: #000;
+  resize: none
 }
 
-.container .row100 .inputBox input {
+.container .row100 .inputBox .text {
   display: block;
   position: absolute;
   top: 0;
   left: 0;
   line-height: 40px;
   padding: 0 10px;
+  font-size: 18px;
   transition: 0.5s;
   pointer-events: none;
+}
+
+.container .row100 .inputBox input:focus~.text,
+.container .row100 .inputBox input:valid~.text {
+  top: -35px;
+  left: -10px;
+}
+
+.container .row100 .inputBox textarea:focus~.text,
+.container .row100 .inputBox textarea:valid~.text {
+  top: -35px;
+  left: -10px;
+}
+
+.container .row100 .inputBox .line {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #44f3ff;
+  transition: 0.5s;
+  border-radius: 2px;
+  pointer-events: none;
+}
+
+.container .row100 .inputBox input:focus~.line,
+.container .row100 .inputBox input:valid~.line {
+  height: 100%;
+}
+
+.container .row100 .textarea {
+  position: relative;
+  width: 100%;
+  height: 100px;
+  padding: 10px 0;
+}
+
+.container .row100 .textarea textarea:focus~.line,
+.container .row100 .textarea textarea:valid~.line {
+  height: 100%;
+}
+
+#submitButton {
+  border: none;
+  padding: 7px 35px;
+  cursor: pointer;
+  outline: none;
+  background: #45f3ff;
+  color: #000;
   font-size: 18px;
+  border-radius: 2px;
 }

@@ -1,0 +1,69 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  /* background-image: url(http://attachments.gfan.com/forum/attachments2/201302/21/0802104fvx9ebv1mkkcvd4.jpg); */
+  background-color: #EE5A24;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-box {
+  display: flex;
+  background-color: #34495e;
+  border-radius: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+#search-text {
+  width: 0px;
+  height: 50px;
+  line-height: 30px;
+  background: transparent;
+  border: none;
+  outline: none;
+  border-color: #64A8CB;
+  color: #64A8CB;
+  font-size: 18px;
+  transition: 0.5s;
+}
+
+.search-box:hover > #search-text {
+  width: 300px;
+  padding: 0 20px;
+}
+
+#search-text::placeholder {
+  color: #64A8CB;
+}
+
+#search-icon {
+  display: flex;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  color: #EE5A24;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.search-box:hover > #search-icon {
+  background-color: #fff;
+}
