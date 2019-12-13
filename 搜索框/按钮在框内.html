@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      display: flex;
+      position: relative;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+    /* 实现搜索框内的按钮，只需要去掉 input 的边框，然后在外层元素添加边框即可 */
+    .box {
+      display: flex;
+      position: relative;
+      width: 120px;
+      height: 36px;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid #000;
+    }
+
+    #search-text {
+      position: relative;
+      width: 100px;
+      height: 30px;
+      border: none;
+      outline: none;
+    }
+
+    #search-icon {
+      position: relative;
+      right: 0;
+      z-index: 1;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box">
+    <input type="text" id="search-text" required='required' placeholder="请输入">
+    <span id="search-icon"><i class="fa fa-search" aria-hidden="true"></i></span>
+  </div>
+</body>
+
+</html>
