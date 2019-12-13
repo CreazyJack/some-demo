@@ -9,10 +9,22 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  /* background-image: url(http://attachments.gfan.com/forum/attachments2/201302/21/0802104fvx9ebv1mkkcvd4.jpg); */
-  background-color: #EE5A24;
+  background-image: linear-gradient(125deg,#1abc9c,#e74c3c,#2980b9,#3498db,#9b59b6,#2ecc71,#1abc9c,#34495e);
+  /* background-color: #EE5A24; */
+  background-size: 400%;
+  animation: bg-animation 20s ease-in-out infinite alternate;
 }
-
+@keyframes bg-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
 .container {
   display: flex;
   width: 100%;
