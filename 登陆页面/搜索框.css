@@ -28,8 +28,6 @@ body {
   align-items: center;
 }
 
-
-
 #search-text {
   width: 0px;
   height: 50px;
@@ -43,7 +41,7 @@ body {
   transition: 0.5s;
 }
 
-.search-box:hover > #search-text {
+.search-box:hover>#search-text {
   width: 300px;
   padding: 0 20px;
 }
@@ -64,6 +62,6 @@ body {
   cursor: pointer;
 }
 
-.search-box:hover > #search-icon {
+.search-box:hover>#search-icon {
   background-color: #fff;
 }
